@@ -1,0 +1,17 @@
+yarn:
+  build: .
+  privileged: true
+  net: "host"
+  volumes:
+    - .:/project
+  working_dir: /project
+  entrypoint: yarn
+
+npm:
+  build: .
+  privileged: true
+  net: "host"
+  volumes:
+    - .:/project
+  working_dir: /project
+  entrypoint: npm
